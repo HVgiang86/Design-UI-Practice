@@ -1,5 +1,6 @@
 package com.example.uidesignpractice.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         EditText etUsername = findViewById(R.id.main_activity_et_username);
         EditText etPassword = findViewById(R.id.main_activity_et_password);
         Button loginButton = findViewById(R.id.main_activity_bt_login);
+        Button nextActivity = findViewById(R.id.main_activity_bt_switch_activity);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,5 +53,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        nextActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

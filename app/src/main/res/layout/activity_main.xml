@@ -120,5 +120,24 @@
                 />
 
         </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            >
+            <Button
+                android:id="@+id/main_activity_bt_switch_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next Activity"
+                android:layout_span="2"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:background="@color/teal_200"
+                />
+
+        </TableRow>
     </TableLayout>
 </android.support.constraint.ConstraintLayout>
