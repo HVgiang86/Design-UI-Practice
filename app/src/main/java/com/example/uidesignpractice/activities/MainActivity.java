@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
                 if (AccountList.isExistAccount(username,password)) {
                     Toast.makeText(getApplicationContext(),"Login Successfully!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(getApplicationContext(),"Login failed! Wrong username or password!", Toast.LENGTH_SHORT).show();
                 }
