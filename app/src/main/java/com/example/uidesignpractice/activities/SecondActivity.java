@@ -43,7 +43,15 @@ public class SecondActivity extends AppCompatActivity {
         CountryListAdapter countryListAdapter = new CountryListAdapter(this, countryList);
         ListView countryListView = (ListView) findViewById(R.id.second_activity_lv_country_list);
         TextView selectedTextView = (TextView) findViewById(R.id.second_activity_tv_selected);
+        TextView  selectNotification = (TextView) findViewById(R.id.second_activity_tv_selected);
 
         countryListView.setAdapter(countryListAdapter);
+
+        countryListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                selectNotification.setText(countryListAdapter.getItem(i).getCountryName() + " selected!");
+            }
+        });
     }
 }

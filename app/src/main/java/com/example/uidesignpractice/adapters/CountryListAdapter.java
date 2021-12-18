@@ -14,6 +14,8 @@ import android.widget.Toast;
 import com.example.uidesignpractice.R;
 import com.example.uidesignpractice.models.Country;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 public class CountryListAdapter extends BaseAdapter {
@@ -49,7 +51,7 @@ public class CountryListAdapter extends BaseAdapter {
         TextView    countryName = (TextView) view.findViewById(R.id.item_country_tv_name);
         Button      sendMessageButton = (Button) view.findViewById(R.id.item_country_bt_send_message);
 
-                flagIcon.setImageResource(countryList.get(i).getCountryFlagIcon());
+        flagIcon.setImageResource(countryList.get(i).getCountryFlagIcon());
         countryName.setText(countryList.get(i).getCountryName());
         sendMessageButton.setOnClickListener(new View.OnClickListener() {
             @Override
