@@ -36,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
         EditText etUsername = findViewById(R.id.main_activity_et_username);
         EditText etPassword = findViewById(R.id.main_activity_et_password);
         Button loginButton = findViewById(R.id.main_activity_bt_login);
-        Button nextActivity = findViewById(R.id.main_activity_bt_switch_activity);
+        Button secondActivity = findViewById(R.id.main_activity_bt_second_activity);
+        Button thirdActivity = findViewById(R.id.main_activity_bt_third_activity);
+
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,10 +57,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        nextActivity.setOnClickListener(new View.OnClickListener() {
+        secondActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        thirdActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ThirdActivity.class);
                 startActivity(intent);
             }
         });

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UIDesignPractice">
         <activity
+            android:name=".activities.ThirdActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.SecondActivity"
             android:exported="false" />
         <activity

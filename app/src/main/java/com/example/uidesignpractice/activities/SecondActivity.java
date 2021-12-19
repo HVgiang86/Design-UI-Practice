@@ -1,5 +1,7 @@
 package com.example.uidesignpractice.activities;
 
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -50,7 +52,15 @@ public class SecondActivity extends AppCompatActivity {
         countryListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                selectNotification.setText(countryListAdapter.getItem(i).getCountryName() + " selected!");
+                if (!countryListView.isSelected()) {
+                    selectNotification.setTextColor(Color.RED);
+                    selectNotification.setTypeface(selectNotification.getTypeface(), Typeface.BOLD);
+                    selectNotification.setText(countryListAdapter.getItem(i).getCountryName() + " selected!");
+
+                } else {
+                    selectNotification.setText("Duplicated selection!");
+                    countryListView.setSelection(i);
+                }
             }
         });
     }

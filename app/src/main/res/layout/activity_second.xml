@@ -18,7 +18,7 @@
         android:text="Nothing selected!"
         android:textColor="@color/purple_500"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        />
 
     <ListView
         android:id="@+id/second_activity_lv_country_list"
@@ -26,7 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:listSelector="#6bb35b"
-        android:divider="@color/teal_700"
-        android:dividerHeight="2dp"/>
+        android:divider="@color/black"
+        android:dividerHeight="3dp"
+        />
 
 </LinearLayout>

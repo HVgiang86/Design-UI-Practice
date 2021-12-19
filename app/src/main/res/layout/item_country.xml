@@ -14,6 +14,7 @@
         android:layout_weight="1"
         android:scaleType="fitCenter"
         android:src="@drawable/ic_flag_vietnam" />
+
     <TextView
         android:id="@+id/item_country_tv_name"
         android:layout_width="0dp"
@@ -26,17 +27,23 @@
         android:textStyle="bold"
         android:layout_margin="5dp"
         />
-    <Button
+
+    <ImageButton
         android:id="@+id/item_country_bt_send_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_gravity="center_vertical"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        android:text="Send Message"
-        android:padding="-5dp"
-        android:layout_margin="5dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_send_message"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:background="@drawable/send_message_button"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingStart="3dp"
+        android:paddingEnd="5dp"
         />
 
 </LinearLayout>

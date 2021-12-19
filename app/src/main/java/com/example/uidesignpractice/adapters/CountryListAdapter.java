@@ -5,9 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,7 +48,11 @@ public class CountryListAdapter extends BaseAdapter {
         view = layoutInflater.inflate(R.layout.item_country,null);
         ImageView   flagIcon = (ImageView) view.findViewById(R.id.item_country_iv_icon);
         TextView    countryName = (TextView) view.findViewById(R.id.item_country_tv_name);
-        Button      sendMessageButton = (Button) view.findViewById(R.id.item_country_bt_send_message);
+        ImageButton sendMessageButton = (ImageButton) view.findViewById(R.id.item_country_bt_send_message);
+
+        if (countryList.get(i).getCountryName().equalsIgnoreCase("china")) {
+            sendMessageButton.setEnabled(false);
+        }
 
         flagIcon.setImageResource(countryList.get(i).getCountryFlagIcon());
         countryName.setText(countryList.get(i).getCountryName());
